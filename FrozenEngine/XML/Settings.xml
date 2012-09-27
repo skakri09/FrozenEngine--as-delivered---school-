@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <video>
+    <resolution>
+      <width>800</width>
+      <height>600</height>
+    </resolution>
+    <wantedFps>60</wantedFps>
+    <fullscreen>false</fullscreen>
+    <noFrame>false</noFrame>
+  </video>
+  <audio>
+    <mute>false</mute>
+    <volume>
+      <master>1</master>
+      <effects>1</effects>
+      <music>1</music>
+      <ambience>1</ambience>
+    </volume>
+  </audio>
+  <controls>
+    <movement>
+      <left>97</left>
+      <right>100</right>
+      <jump>32</jump>
+      <duck>274</duck>
+    </movement>
+    <combat>
+      <attack>32</attack>
+    </combat>
+    <interface>
+      <pause>112</pause>
+      <menu>27</menu>
+      <mute>109</mute>
+    </interface>
+  </controls>
+  <multiplayer>
+    <playerisClient>false</playerisClient>
+    <opponentIP>88.89.76.50</opponentIP>
+    <port>2000</port>
+  </multiplayer>
+  <logging>
+    <logToConsole>true</logToConsole>
+    <loglevel>1</loglevel>
+  </logging>
+</settings>

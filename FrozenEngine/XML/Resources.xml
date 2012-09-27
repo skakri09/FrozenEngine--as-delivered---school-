@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<!-- Resources for FROZEN ENGINE are listed in this xml document.    -->
+<!-- Any images, videos or sound effects should be listed with their -->
+<!-- appropriate file paths here.                                    -->
+<resources>
+  
+  
+  <!--          - - -        S U R F A C E S        - - -         -->
+  <!--  Sprites, backgrounds etc, any image format SDL supports   -->
+  
+  <images>
+    
+    <image>
+      <filename>..//GFX//menu_bg.png</filename>
+    </image>
+    <image>
+      <filename>..//GFX//start_server.png</filename>
+    </image>
+    <image>
+      <filename>..//GFX//start_client.png</filename>
+    </image>
+    <image>
+      <filename>..//GFX//single_player.png</filename>
+    </image>
+    <image>
+      <filename>..//GFX//exit.png</filename>
+    </image>
+    <image>
+      <filename>..//GFX//background.png</filename>
+    </image>
+    <image>
+      <filename>..//GFX//FrozenLoading720p.png</filename>
+    </image>
+    <image>
+      <filename>..//GFX//FrozenLoading800x600.png</filename>
+    </image>
+    <image>
+      <filename>..//GFX//bad_image.png</filename>
+    </image>
+
+  </images>
+
+  <!-- SPRITES -->
+  
+  <sprites>
+    
+    <sprite>
+      <filename>..//GFX//naruto.png</filename>
+      <idle>
+        <idleDuration>1</idleDuration>
+        <idleFrames></idleFrames>
+        <idleWidth></idleWidth>
+        <idleHeight></idleHeight>
+        <yCrop></yCrop>
+      </idle>
+      <walking>
+        <walkingDuration></walkingDuration>
+        <walkingFrames></walkingFrames>
+        <walkingWidth></walkingWidth>
+        <walkingHeight></walkingHeight>
+        <yCrop></yCrop>
+      </walking>
+      <running>
+        <runningDuration>0.55</runningDuration>
+       <runningFrames>5</runningFrames>
+        <runningWidth>32</runningWidth>
+        <runningHeight>52</runningHeight>
+        <yCrop></yCrop>
+      </running>
+      <jumping>
+        <jumpingDuration>1</jumpingDuration>
+        <jumpingFrames></jumpingFrames>
+        <jumpingWidth>44</jumpingWidth>
+        <jumpingHeight>52</jumpingHeight>
+        <yCrop></yCrop>
+      </jumping>
+      <falling>
+        <fallingDuration>1</fallingDuration>
+        <fallingFrames></fallingFrames>
+        <fallingWidth></fallingWidth>
+        <fallingHeight></fallingHeight>
+        <yCrop></yCrop>
+      </falling>
+    </sprite>
+   
+    <sprite>
+      <filename>..//GFX//tobi.png</filename>
+      <runAnimDuration>0.55</runAnimDuration>
+      <runFrames>5</runFrames>
+      <runFrameWidth>36</runFrameWidth>
+      <runFrameHeight>63</runFrameHeight>
+      <jumpFrameWidth>36</jumpFrameWidth>
+      <jumpFrameHeight>63</jumpFrameHeight>
+    </sprite>
+    <sprite>
+      <filename>..//GFX//sasuke.png</filename>
+      <runAnimDuration>0.55</runAnimDuration>
+      <runFrames>5</runFrames>
+      <runFrameWidth>36</runFrameWidth>
+      <runFrameHeight>63</runFrameHeight>
+      <jumpFrameWidth>36</jumpFrameWidth>
+      <jumpFrameHeight>63</jumpFrameHeight>
+    </sprite>
+    <sprite>
+      <filename>..//GFX//raymaasnWalk.png</filename>
+      <runAnimDuration>0.44</runAnimDuration>
+      <runFrames>8</runFrames>
+      <runFrameWidth>40</runFrameWidth>
+      <runFrameHeight>56</runFrameHeight>
+      <jumpFrameWidth>36</jumpFrameWidth>
+      <jumpFrameHeight>63</jumpFrameHeight>
+    </sprite>
+    <sprite>
+      <filename>..//GFX//raymanWalk.png</filename>
+      <runAnimDuration>0.9</runAnimDuration>
+      <runFrames>9</runFrames>
+      <runFrameWidth>30</runFrameWidth>
+      <runFrameHeight>55</runFrameHeight>
+      <jumpFrameWidth>36</jumpFrameWidth>
+      <jumpFrameHeight>63</jumpFrameHeight>
+    </sprite>
+    <sprite>
+      <filename>..//GFX//gb_walk.png</filename>
+      <runAnimDuration>0.8</runAnimDuration>
+      <runFrames>6</runFrames>
+      <runFrameWidth>104</runFrameWidth>
+      <runFrameHeight>151</runFrameHeight>
+      <jumpFrameWidth>36</jumpFrameWidth>
+      <jumpFrameHeight>63</jumpFrameHeight>
+    </sprite>
+    <sprite>
+      <filename>..//GFX//character.png</filename>
+      <runAnimDuration>0.7</runAnimDuration>
+      <runFrames>7</runFrames>
+      <runFrameWidth>300</runFrameWidth>
+      <runFrameHeight>265</runFrameHeight>
+      <jumpFrameWidth>300</jumpFrameWidth>
+      <jumpFrameHeight>265</jumpFrameHeight>
+    </sprite>
+    
+  </sprites>
+ 
+  <!-- - - - - E N D - - - O F - - -  S U R F A C E S  -->
+  
+
+  
+  <!--            - - -           V I D E O           - - -          -->
+  <!-- Video clips goes here. ONLY MPEG-1 (.mpg) files are supported -->
+  
+  <video>
+    <mpeg>
+      <filename>..//MPG//EngineIntro720p.mpg</filename>
+      <width>1280</width>
+      <height>720</height>
+    </mpeg>
+  </video>
+  <!-- - - - - E N D - - - O F - - -  V I D E O  -->
+
+  
+  
+  
+  <!--      - - -     S F X       - - -      -->
+  <!--    All music and sounds goes here.    -->
+  <!--  Check out OpenAL for format support  -->
+
+  <sfx>
+    <sound>
+      <filename>../sfx/game.wav</filename>
+    </sound>
+    <sound>
+      <filename>../sfx/FrozenMenu.wav</filename>
+    </sound>
+    <sound>
+      <filename>../sfx/button.wav</filename>
+    </sound>
+    <sound>
+      <filename>../sfx/jump.wav</filename>
+    </sound>
+    <sound>
+      <filename>../sfx/attack.wav</filename>
+    </sound>
+    <sound>
+      <filename>../sfx/landed.wav</filename>
+    </sound>
+      
+  </sfx>
+ <!-- - - - - E N D - - - O F - - -  S F X  -->
+  
+</resources>
+
+<!-- - - - - E N D - - - O F - - -  R E S O U R C E S  -->

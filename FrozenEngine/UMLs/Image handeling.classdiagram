@@ -1,0 +1,769 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="4fd06508-8a50-499c-9b41-18bb6edd1728" name="Image handeling" linkedPackageId="a9fa167e-2b2a-4d15-a0c5-6dec677a50e4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="48d0b187-cb8c-4029-9d13-cfae2449f718">
+      <elementDefinition Id="5832fa80-5f99-4863-b54c-61952b6d3edb" />
+      <body>Singelton</body>
+      <annotatedElements>
+        <classMoniker Id="4cfdf986-4be2-4960-81b5-d1e43ee37057" LastKnownName="CRenderEngine : public Task" />
+      </annotatedElements>
+    </comment>
+    <comment Id="7cdc7eab-d79b-4136-9d2a-a49ad7bc783d">
+      <elementDefinition Id="743e23ac-9e7c-4031-b73e-f5eac54f2b98" />
+      <body>Abstract interface class
+. Functionality any surface requires, visible or not.</body>
+      <annotatedElements>
+        <classMoniker Id="8cd06cdf-7a78-4d20-b8f8-c71286fb9128" LastKnownName="CSurfaceInterface" />
+      </annotatedElements>
+    </comment>
+    <comment Id="5ac3f730-483f-40ec-8511-931baf0a9a5e">
+      <elementDefinition Id="c417569d-a39c-466d-b507-8e8c5dd8ef9e" />
+      <body>Abstract interface class
+</body>
+      <annotatedElements>
+        <classMoniker Id="de854f36-79c9-4853-b2cd-a27de212fc6d" LastKnownName="Task" />
+      </annotatedElements>
+    </comment>
+    <comment Id="cebd8d74-b08d-475b-8e10-f059544f7b7b">
+      <elementDefinition Id="bde2cc28-ddd7-4bce-b71b-1b77cecfa2e3" />
+      <body>Singelton</body>
+      <annotatedElements>
+        <classMoniker Id="faf3beeb-3b77-45c1-b6c8-43e6f0992cea" LastKnownName="CSurfaceFactory" />
+      </annotatedElements>
+    </comment>
+    <comment Id="0ff9e13a-065a-4fb4-834b-35808667cf17">
+      <elementDefinition Id="59e217eb-40a0-42a4-924f-8fdeaf69dec9" />
+      <body>void CRenderEngine::RenderSurfaces()
+{
+   	 for(RenderList::iterator i = _renderList.begin(); i != _renderList.end();)
+    	{
+		if((**i).RemoveImage())
+		{
+			i = _renderList.erase(i);
+		}
+		else
+		{
+			renderRect = (**i).surfaceRect:
+			positionRect.x = (**i).get2DPoosition.getX();
+			positionRect.Y = (**i).get2DPoosition.getY();
+			// possible static_cast&lt;int&gt;();
+
+SDL_BlitSurface((**i).getImageSurface(), &amp;renderRect, _screenSurface, &amp;positionRect);
+
+			(**i).UpdateSurface();
+			
+			++i;
+		}
+	}
+}</body>
+      <annotatedElements>
+        <classMoniker Id="4cfdf986-4be2-4960-81b5-d1e43ee37057" LastKnownName="CRenderEngine : public Task" />
+      </annotatedElements>
+    </comment>
+    <comment Id="371e268b-585a-4b72-b465-b56ce1df05c3">
+      <elementDefinition Id="72e834a8-dca1-4e13-a738-2d2b21b90356" />
+      <body>~dtor()
+{
+     CRenderEngine::RemoveRenderable(this)
+}</body>
+      <annotatedElements>
+        <classMoniker Id="b4ccd2b6-7a11-4d03-a1c0-f2c523b50553" LastKnownName="CRenderable" />
+      </annotatedElements>
+    </comment>
+    <comment Id="ec8cc384-34b3-4c2c-bc2d-f65f53fa4e02">
+      <elementDefinition Id="9acb3a44-5f3d-4216-9582-f3b7b36e34b5" />
+      <body>Collision detections</body>
+      <annotatedElements>
+        <classMoniker Id="02b9f389-d2b6-4e99-af91-f1988e4ec0f8" LastKnownName="CInteractable" />
+      </annotatedElements>
+    </comment>
+    <comment Id="00f6a2df-3bc4-4b81-b4df-c4596a700bec">
+      <elementDefinition Id="cce879a8-aa79-4e59-af4e-ddc97b4fc083" />
+      <body>Animation handeling</body>
+      <annotatedElements>
+        <classMoniker Id="a59944e5-c751-4474-ba52-d4ada7afa407" LastKnownName="CAnimationable" />
+      </annotatedElements>
+    </comment>
+    <comment Id="9f0aaa85-f7fd-4e84-b67c-376db2c0a4d8">
+      <elementDefinition Id="8ec2abee-e62a-4cbd-b1c2-d1e8874489cf" />
+      <body>Render handeling and 
+surface* storing</body>
+      <annotatedElements>
+        <classMoniker Id="b4ccd2b6-7a11-4d03-a1c0-f2c523b50553" LastKnownName="CRenderable" />
+      </annotatedElements>
+    </comment>
+    <comment Id="d73f0eef-2ffd-4792-b0b6-b410a49d9a7c">
+      <elementDefinition Id="c872954e-8db9-489a-9da5-09f4952f4dbb" />
+      <body>movement velocity, acceleration and functions to handle movement.</body>
+      <annotatedElements>
+        <classMoniker Id="fbde4b70-d380-4436-9b22-bb4de2927ab3" LastKnownName="CMovable" />
+      </annotatedElements>
+    </comment>
+    <comment Id="f1ce226c-e967-4c89-8886-b8f4b697691f">
+      <elementDefinition Id="25d7ecb3-3c7e-42f3-88bb-8a4fb0afadca" />
+      <body>Plugins for surfaces. Does not have affiliation with surface interface, as either of these will as is now never be used without at least one of the other surface classes</body>
+      <annotatedElements>
+        <classMoniker Id="0b026e9f-d6c5-41d7-a838-0f93dd73c7e1" LastKnownName="CGravity" />
+        <classMoniker Id="a59944e5-c751-4474-ba52-d4ada7afa407" LastKnownName="CAnimationable" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fbde4b70-d380-4436-9b22-bb4de2927ab3" name="CMovable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1e190195-3b19-45de-99fc-d85bac6b2985" />
+        <generalsInternal>
+          <generalization Id="55e5b0d8-f9f2-4b1d-ac83-7d4b309375c7" isSubstitutable="false">
+            <classMoniker Id="8cd06cdf-7a78-4d20-b8f8-c71286fb9128" LastKnownName="CSurfaceInterface" />
+            <elementDefinition Id="e5a8ff99-5327-45b7-b86b-8e0d3d34410b" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="a09ea33e-3d35-42d3-a5cb-5a3dfce14f61" name="CVector2D velocity;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="085eeb8e-f67a-4973-875d-550ac5b5013c" />
+          </property>
+          <property Id="287494ee-da92-4e09-bd1b-1aaae174ab75" name="CVector2D acceleration/force;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="903328a3-cd4e-48da-8794-d0400024a6c9" />
+          </property>
+          <property Id="2ad37a9a-151c-407d-bc1b-a8404a58286f" name="include timer // delta time" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d62e71d6-6f34-4d79-9e75-8d16a0065b40" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="6000e871-6f39-4201-8a53-2b3e7e9664ff" name="void SetVelocity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e0540da5-912c-4a8a-8126-523601140b34" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5014dca0-e6ad-41ad-b8d0-76faaac6b04b" name="fCVector2D newVel" direction="In" isUnique="false">
+                  <elementDefinition Id="fe571a31-f2ce-44bb-9d59-da67b661f2cf" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ede5361b-6c0c-4a70-a36a-b95dca4c241d" name="void SetXVelocity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3665e0a4-3a8b-4b7a-a83d-b534dc493fe4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8f8ba361-3d59-4340-870b-323a933423b3" name="float newXVel" direction="In" isUnique="false">
+                  <elementDefinition Id="ef65f70d-73e7-4598-ab53-6405feeba2f6" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="453364e1-7ff5-4b65-9140-0c07b8d67729" name="float SetYVelocity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6267e170-81f5-4a26-9d15-1b1da2dae502" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3b24e015-0c59-40e8-8508-07d45d2d4e16" name="float newYVel" direction="In" isUnique="false">
+                  <elementDefinition Id="eabb53f3-795e-42ad-b3d6-08296939f463" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d4eb3bc1-d45e-44fb-897e-4400fcaa0a0e" name="void UpdatePosition" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="184dd2a7-0d3e-42ce-b748-811921e7cd6c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4cfdf986-4be2-4960-81b5-d1e43ee37057" name="CRenderEngine : public Task" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c332471d-ae93-48f0-8017-5f5258f5ce2a" />
+        <generalsInternal>
+          <generalization Id="1d2bb11e-342a-4553-9ca1-d79e8f74fd21" isSubstitutable="false">
+            <classMoniker Id="de854f36-79c9-4853-b2cd-a27de212fc6d" LastKnownName="Task" />
+            <elementDefinition Id="354a0800-637c-4539-aa9d-f81d779a0e87" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="e225b3b1-a977-4d96-be25-47373ccf4278" name="vector&lt;CRenderable*&gt;  renderList" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="89d07e4c-caeb-4375-846b-9b175036adcf" />
+          </property>
+          <property Id="c8f3605a-6e35-4186-8c90-5634e56f94e7" name="SDL_Rect renderRect;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d4498a67-970c-451b-b032-9a917460990f" />
+          </property>
+          <property Id="c1e84226-62c8-42f3-9a34-0fb55066db01" name="SDL_Rect positionRect;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e84e0d93-1d43-46d8-a4c5-faa26f9be6fc" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="35b42ea8-7dc8-4e67-83a1-a97632179ed8" name="void RenderSurfaces" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="21eaeb49-6f30-437f-bdee-98dfb11f4e80" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0edff405-f631-4891-b10c-e3909537dd51" name="CSurfaceInterface&amp; surface" direction="In" isUnique="false">
+                  <elementDefinition Id="130418f4-190d-4235-9cf4-e285b71e7091" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e40bd8f3-f3a0-4575-a214-f03075186c6f" name="void AddRenderable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1b53b32d-f1c8-4b37-bc16-160786608bda" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1d025543-7ed8-4109-b71e-343f7be76a5d" name="CRenderable* theRenderable" direction="In" isUnique="false">
+                  <elementDefinition Id="fce123da-dacf-473e-beff-3e909ddded7f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="667e91b2-8bb9-4c96-86be-e0b61c73a2f1" name="void RemoveRenderable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e033785e-15a6-42c1-ad3d-e6d6e9aee68b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ddf30734-875e-47da-8227-7287e41898bb" name="CRenderable* theRenderable" direction="In" isUnique="false">
+                  <elementDefinition Id="d7d6e800-fbc1-47b7-9cbe-9140e373eeb4" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8cd06cdf-7a78-4d20-b8f8-c71286fb9128" name="CSurfaceInterface" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d1184053-0f75-4635-929f-6a3443325458" />
+        <ownedAttributesInternal>
+          <property Id="e7855309-3743-4a42-a8c7-69d3d4c6a2e4" name="CVector2D position" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4bc14b0e-70cf-4c67-8e13-653a4e1c65c0" />
+          </property>
+          <property Id="8947fefd-b67a-4fba-98b1-fc7a6f744934" name="SDL_Rect surfaceRect" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cd834e82-4433-4449-8d2d-ec33702056c7" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="8e1123b7-b026-40a3-96a4-c74c824db98a" name="virtual CVector2D* Get2DPosition" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ec5c427c-e66e-403f-97de-956d9a117dde" />
+          </operation>
+          <operation Id="e769bf1f-60c1-490f-bfeb-08c2b1dc2196" name="virtual SDL_Rect* GetRect" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="98cb49e0-6bd6-404d-b725-f1e95f72f7a0" />
+          </operation>
+          <operation Id="255df07c-7e77-4d22-8b6b-9f1f4884b9c1" name="virtual void UpdateSurface" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="79a3a06d-ab42-4fd6-b3dc-8c63e40522a9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="de854f36-79c9-4853-b2cd-a27de212fc6d" name="Task" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="61fe0222-1887-4483-9a16-34566a33a428" />
+        <ownedOperationsInternal>
+          <operation Id="65a6d677-798c-4e01-95bb-6754b7f07b17" name="virtual void Pause" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b7e5e8ac-b9aa-4d01-8162-d62c73c3a692" />
+          </operation>
+          <operation Id="594525b3-5030-4bb4-8385-16633df80c1f" name="virtual void Resume" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5342d2e1-915b-451d-8456-f3223de1d266" />
+          </operation>
+          <operation Id="0c548f17-6128-4258-babb-0f4ed143a597" name="virtual void Start" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="65d80112-c7ba-4eee-8d29-2c6aaeeb9958" />
+          </operation>
+          <operation Id="ff30d918-f51a-4658-91ac-44811eed120a" name="virtual void Stop" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="53461039-6fde-4f32-bee1-666e4445a2b1" />
+          </operation>
+          <operation Id="e795f15e-5182-48c6-b84c-7ba4ea580321" name="virtual void Update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="310d48b8-2a84-45bc-8ffb-a40b2ff63ec9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b4ccd2b6-7a11-4d03-a1c0-f2c523b50553" name="CRenderable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="36608a86-7245-4b62-b0af-b8ab09f10ec1" />
+        <suppliersInternal>
+          <dependency Id="1ab4c467-00e6-404d-a732-5ac0c0ec6b6b">
+            <classMoniker Id="4cfdf986-4be2-4960-81b5-d1e43ee37057" LastKnownName="CRenderEngine : public Task" />
+            <elementDefinition Id="ed7e69e7-8650-4714-9b52-46b01da91607" />
+          </dependency>
+          <dependency Id="5018247b-dbff-46c6-8f1e-510146602b24">
+            <classMoniker Id="faf3beeb-3b77-45c1-b6c8-43e6f0992cea" LastKnownName="CSurfaceFactory" />
+            <elementDefinition Id="671d69bb-40c9-4b6b-bb19-049c4a8b8e11" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="20472146-7104-4707-a5d2-3b0a310a3671" isSubstitutable="false">
+            <classMoniker Id="8cd06cdf-7a78-4d20-b8f8-c71286fb9128" LastKnownName="CSurfaceInterface" />
+            <elementDefinition Id="602aa34a-8190-4272-b1ea-e83a6a92a0fa" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="bc7b3363-5f42-4717-89aa-1681941b5050" name="bool render" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="723beafc-70ae-4215-b431-a25d9c0cb89e" />
+          </property>
+          <property Id="79cb53a9-dea7-4fe1-b928-80e06c623e37" name="SDL_Surface* renderSurface;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5074083e-b4d0-4e40-9769-100f8a318a54" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="2eb3c3d0-7c5f-4a84-ac4e-7b93f0e6e544" name="virtual SubForRender" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="45c46843-6990-421d-a3e9-aa3d6925d63b" />
+          </operation>
+          <operation Id="ab99660a-1422-4698-b366-46741ef83a39" name="void UnsubForRender" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b4133130-2b85-4666-8fe0-b6527bb1c658" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="faf3beeb-3b77-45c1-b6c8-43e6f0992cea" name="CSurfaceFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bc429df4-dd38-4c8f-95dc-cd3a010d1b9f" />
+        <suppliersInternal>
+          <dependency Id="48a9db47-748d-4e01-8caa-c49c7241f88d">
+            <enumerationMoniker Id="737212a2-597c-4bd1-9a77-123761b626e3" LastKnownName="SurfaceSets" />
+            <elementDefinition Id="28a9236e-4a45-4199-b9f3-596a5c82a5b3" />
+          </dependency>
+          <dependency Id="63c35ea1-9735-423c-ad0a-bbf4c2b64460">
+            <classMoniker Id="f2e27818-ad48-46e4-957b-5ec6ff07623c" LastKnownName="CXML_SurfaceImport" />
+            <elementDefinition Id="6c9cb40e-4140-4d61-8606-0adb261c9740" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="65055490-5ad4-4bcb-9d40-91dec22344cb" name="SurfaceSets surfaceSets;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f2f6b0e6-1356-4882-a4be-aee8a549dc63" />
+          </property>
+          <property Id="2ed0cb75-9d08-4d33-8402-84e4f0234873" name="vector&lt;SurfaceSets&gt; loadedSurfaceSets;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c28d4477-b420-4cdc-b122-420372fd66da" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="23af7b01-b1ee-443b-9647-8d81e8e8629b" name="void LoadSurfaceSet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0839cf35-9b09-440b-954c-0a78098fab96" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="48f67c2f-a25e-4977-a1ca-8e635c5b8df6" name="SurfaceSets setID" direction="In" isUnique="false">
+                  <elementDefinition Id="1f06db68-3dd7-4d23-b1e9-9c4222e9afd5" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6e80032e-ee73-4ecf-a7c3-bb56651ac567" name="void UnloadSurfaceSet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9c2ff63a-4768-41cb-8a3a-82c27f1e0b1b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d16a34a3-cd49-4417-9f70-d6c60c86c1b7" name="SurfaceSets setID" direction="In" isUnique="false">
+                  <elementDefinition Id="97c804c3-5d74-4489-8a30-a01966327e4f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ee7eb399-b581-40db-8c16-9d53c86cf0ef" name="void freeSurface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2b1352da-f559-416f-9afc-cba15dc1bbf7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7c6ef17e-0095-4e74-bfa4-495d672ac985" name="SDL_Surface* surfaceToFree" direction="In" isUnique="false">
+                  <elementDefinition Id="3a773ca4-90bc-46b8-a19a-521a694e0240" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0150fc6d-88a4-4bb7-a80d-48003b195dfd" name="SDL_Surface* LoadSurface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e322d3ab-ad2e-4e62-9399-73fe0ba2c139" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e4741bcd-333f-4413-80b9-e06e61a02a1b" name="std::string filePath" direction="In" isUnique="false">
+                  <elementDefinition Id="62813263-63b7-4fac-b391-4152eb8c2308" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="483d51f3-0687-412b-b3a1-7509bf504dfd" name="bool IsSurfaceSetLoaded" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b1caedda-0609-42c1-b567-4af9b7000369" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c46c979f-be30-4d4b-af6e-73072051788e" name="SurfaceSets setID" direction="In" isUnique="false">
+                  <elementDefinition Id="31f63e10-1a92-463b-a96a-402b94d90537" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="737212a2-597c-4bd1-9a77-123761b626e3" name="SurfaceSets" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4246080b-bdf7-45c2-aebc-3ee90884c295" />
+        <ownedLiterals>
+          <enumerationLiteral Id="3bba5382-61df-4de8-afcd-89446f404930" name="ALWAYS_LOADED = 0">
+            <elementDefinition Id="b6c89006-2dfe-422e-9be3-18e7be9fc773" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="c786365c-4877-43f5-a83c-3486c7eb32bc" name="LOADED_1">
+            <elementDefinition Id="b12263aa-49f6-49ec-b52f-b37997dfa62a" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="1354deab-2502-468c-86ed-6dc4a5fcbae1" name="LOADED_2">
+            <elementDefinition Id="6046c66b-7f2d-4b8c-832d-c8ab2b4e81c6" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="46becb94-a711-4160-9152-056109559965" name="LOADED_3">
+            <elementDefinition Id="445a0ad0-6bdc-4b3d-aed5-aafc26b91fad" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="9a4d7832-6658-43e9-a39c-f51d198728ad" name="LOADED_4">
+            <elementDefinition Id="33a5c3c8-aaa9-4405-8cb5-c018efab580f" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="d93a1b6d-e08f-492d-8b9f-897f6699e111" name="LOADED_5">
+            <elementDefinition Id="8cddf104-a237-44a9-9fca-2a2b9b51ebb8" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="5f004da5-22a7-467f-a4b4-fe4b1d52e86a" name="NUMBER_OF_SURFACE_SETS">
+            <elementDefinition Id="5c1a6931-6beb-4801-aad7-45e59114fc66" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="02b9f389-d2b6-4e99-af91-f1988e4ec0f8" name="CInteractable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b7b050d1-260b-45e4-807b-b28a496a97b5" />
+        <generalsInternal>
+          <generalization Id="bb7b4b94-f98d-45ed-977e-eb2e1dc1910e" isSubstitutable="false">
+            <classMoniker Id="8cd06cdf-7a78-4d20-b8f8-c71286fb9128" LastKnownName="CSurfaceInterface" />
+            <elementDefinition Id="e745275d-0160-422a-8685-e04d246c5696" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="23ad8a14-6af4-47b0-8aba-99fc6919aa7a" name="bool interactable" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b5876881-31c1-47dc-98a2-7cbce28be46d" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="80592622-64ba-4472-b803-c5006e094d36" name="virtual void MakeInteractable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ca4b11a2-a3a4-4709-a7ed-7bece6e36678" />
+          </operation>
+          <operation Id="2d78d2dd-ffae-44bf-a0f5-18e1c7047072" name="virtual void MakeNoneInteractable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dc2ce118-6415-4f18-89dc-bb3a0824b2b2" />
+          </operation>
+          <operation Id="90e7385a-dabb-4232-8e72-6776201f3751" name="void OnCollision" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6c538616-7239-45f9-ab6f-c0330da70658" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9f886b2a-d0e8-4734-a1e0-402bab5f3dd3" name="void* callback" direction="In" isUnique="false">
+                  <elementDefinition Id="292edf00-8a68-48b9-8b05-ac405712589f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="94a75f3a-678f-4fa9-8b02-dd1790c2dd6a" name="bool IsCollision" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="da649439-9159-42a2-87f2-abcd35c13ef3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e4dba3a0-0c99-48f5-bcb1-07c57c65c114" name="SDL_Rect otherRect" direction="In" isUnique="false">
+                  <elementDefinition Id="6a249eae-8831-4fa1-9219-53fee85e268d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d43686a6-1c8d-4863-af83-560ce01cb4b8" name="bool IsCollision" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="85ecf52d-119e-486b-85ec-2aefd0c2a849" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="77280d73-3cbe-4c9c-84d1-1d426f82ae22" name="CSurfaceInterface* otherSurface" direction="In" isUnique="false">
+                  <elementDefinition Id="a80a7a25-0e4e-4137-b59a-1285c26d0001" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d3ec7855-b471-450e-b55a-5a8af7db98ad" name="bool IsCollision(SDL_Color theColor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="178cf1c3-6dee-400b-8b57-ac830c905a75" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a59944e5-c751-4474-ba52-d4ada7afa407" name="CAnimationable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a2b5bfe0-87e9-4c16-a3a1-31cda4f96d02" />
+        <suppliersInternal>
+          <dependency Id="efedda12-63c3-495b-8c97-f0d2aec59604">
+            <enumerationMoniker Id="c51a6ff7-2a67-415a-87de-d03a7ebeac9e" LastKnownName="Direction" />
+            <elementDefinition Id="36439c3c-604c-4959-ba7a-7ff22aeee853" />
+          </dependency>
+          <dependency Id="cef90626-f255-4221-a643-f001aed32af6">
+            <enumerationMoniker Id="f472f4c6-b312-4242-b03a-f5ec29fd8a73" LastKnownName="AnimationState" />
+            <elementDefinition Id="47e799dd-9b35-4f9a-bf2e-88771748ffc8" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="3f1c2bff-f1c9-4dbe-a40f-3f22bf45c1bc" name="Direction currentDirection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1513d126-7539-4d6f-9cf4-84a1e0cb65ca" />
+          </property>
+          <property Id="cc9151ef-3072-4e9a-b47b-e3228fa64f71" name="AnimationState animState;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cefcfade-1317-4089-a38b-900eb76bfa6b" />
+          </property>
+          <property Id="30678b9b-7bec-4ff2-a0ab-fd304df86dfb" name="include timer // delta time" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="21a50ce0-a62e-42cb-aef2-9756bc99acfc" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e5c8ecb7-da58-456d-bde9-cbd7ab2ec3ce" name="void CalculateFrame" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e88ae09f-d8b2-4bb2-970b-47d1bd83647a" />
+          </operation>
+          <operation Id="edf1a24b-7569-4d9f-8e6b-b94ee86968cf" name="void SetToFirstFrame" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3df93ad6-657f-4707-a543-3f76214445be" />
+          </operation>
+          <operation Id="85cdffb9-c6b4-46cd-b5bf-aa3cd41a463f" name="void UpdateSurface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b958999-5da8-40af-a799-a0cd5a6b47c3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6fde4b37-8524-42c2-8b4c-c16dadb681e0" name=") //overload for anim(" direction="In" isUnique="false">
+                  <elementDefinition Id="0ff73c9a-00cb-4f73-96c8-a47acf1d7b64" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cf6cb0c8-d9d9-497a-ab72-be21531011df" name="AnimationState DetermineAnimationState" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7fd77f33-692f-4771-9518-9d53ed01c825" />
+          </operation>
+          <operation Id="15e43475-9d79-40b4-83c2-992422f64cb6" name="Direction DetermineDirection" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fa2ef5fb-6d92-41d9-8385-b06cc450b78f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="f472f4c6-b312-4242-b03a-f5ec29fd8a73" name="AnimationState" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4e19208c-8ed4-476f-bd44-a30f89338a80" />
+        <ownedLiterals>
+          <enumerationLiteral Id="94159e3a-f7e1-499c-9c42-ce36c39e3354" name="IDLE">
+            <elementDefinition Id="319c1782-51ad-49b0-a4fc-a68bc723152e" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="857b39f6-8c75-4cc4-8f29-32f323ddf1bd" name="WALKING">
+            <elementDefinition Id="14611f27-8396-4c6e-8ffe-0232fd34b345" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="be132a66-ba9e-4fc3-aea6-bcf7df558625" name="RUNNING">
+            <elementDefinition Id="1621f20c-57c2-4a74-9b4f-9809c09b1134" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="25095bd1-dc24-404b-949d-d3329717b216" name="JUMPING">
+            <elementDefinition Id="6211755a-ca11-4306-8f43-78279ab870f1" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="ae33e911-77d4-4c7a-b292-e3dde7eb1444" name="FALLING">
+            <elementDefinition Id="4cbfcac0-e4a5-4d07-879b-16387931d099" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="19ba0b2b-5eb9-47ef-8483-ee57b600b2d0" name="ATTACKING">
+            <elementDefinition Id="4d5d6997-946a-465b-8f79-b498f904a046" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="c51a6ff7-2a67-415a-87de-d03a7ebeac9e" name="Direction" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dc1475aa-e512-4526-b68e-a039c4ae56a2" />
+        <ownedLiterals>
+          <enumerationLiteral Id="ebc5b4a3-4550-4add-ad0d-022f3646d0ad" name="LEFT">
+            <elementDefinition Id="53a7fee9-3eae-4633-9aa6-f746419fc7fd" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="26927e52-17a2-441c-a3b9-cc93ba9a3e1e" name="RIGHT">
+            <elementDefinition Id="8e4e413b-6bff-49db-b510-cd65f4748eb1" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5bed70c9-c8b1-4dab-8478-5da73a56ac4c" name="CPlayer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="95d11b03-4721-423f-b253-415b974e5e18" />
+        <generalsInternal>
+          <generalization Id="36891eb4-77c4-431c-9896-640d82e01d6f" isSubstitutable="false">
+            <classMoniker Id="fbde4b70-d380-4436-9b22-bb4de2927ab3" LastKnownName="CMovable" />
+            <elementDefinition Id="b776e6e1-e0db-48e6-8595-9f74a76eef5a" />
+          </generalization>
+          <generalization Id="4fbabf2d-6161-48f8-8490-243da4899900" isSubstitutable="false">
+            <classMoniker Id="02b9f389-d2b6-4e99-af91-f1988e4ec0f8" LastKnownName="CInteractable" />
+            <elementDefinition Id="039927c1-367e-4b33-a0cd-e61b7e0555c3" />
+          </generalization>
+          <generalization Id="05ecbddf-99d7-41e9-9e3d-d34f0ca2cdba" isSubstitutable="false">
+            <classMoniker Id="a59944e5-c751-4474-ba52-d4ada7afa407" LastKnownName="CAnimationable" />
+            <elementDefinition Id="adeed9d7-1c7e-4ff6-b327-c2dd803aeb6b" />
+          </generalization>
+          <generalization Id="c857a322-72a3-4fb7-9206-e3a7e37ef1ce" isSubstitutable="false">
+            <classMoniker Id="b4ccd2b6-7a11-4d03-a1c0-f2c523b50553" LastKnownName="CRenderable" />
+            <elementDefinition Id="fed49a18-ab92-4157-9316-9113d8ff8c76" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5a5857af-2647-4d09-83d6-3e58ded60c69" name="CBackground" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a5dc0e8c-e38f-40a7-b087-a9278d8227f3" />
+        <generalsInternal>
+          <generalization Id="ad5e7c27-0d65-4c2f-917a-a94ec162ebf7" isSubstitutable="false">
+            <classMoniker Id="b4ccd2b6-7a11-4d03-a1c0-f2c523b50553" LastKnownName="CRenderable" />
+            <elementDefinition Id="1bdb792f-6059-4323-ac13-3dcce676265b" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="213ee025-7953-4d8c-a896-cd3b10c8b4a6" name="CMovingPlatform" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="db25824b-ff1e-4820-8d8e-a586efb012f1" />
+        <generalsInternal>
+          <generalization Id="533fbca2-e591-4138-8f22-9edd2790258d" isSubstitutable="false">
+            <classMoniker Id="b4ccd2b6-7a11-4d03-a1c0-f2c523b50553" LastKnownName="CRenderable" />
+            <elementDefinition Id="cb2a53af-b1f3-4db0-8a85-7634d22b295c" />
+          </generalization>
+          <generalization Id="e893f97d-bb57-4447-9c8c-58363016b47c" isSubstitutable="false">
+            <classMoniker Id="02b9f389-d2b6-4e99-af91-f1988e4ec0f8" LastKnownName="CInteractable" />
+            <elementDefinition Id="0c876797-0651-43b0-a443-a86fd703132e" />
+          </generalization>
+          <generalization Id="c14d5fa3-b839-483a-b337-a1cbb3edb707" isSubstitutable="false">
+            <classMoniker Id="fbde4b70-d380-4436-9b22-bb4de2927ab3" LastKnownName="CMovable" />
+            <elementDefinition Id="a40edece-fabe-44d0-a195-53348c0829fb" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="22879818-c0f4-429b-9a6f-e54fc91b5ad7" name="FlyWeight SimpleNPC" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f39a7d56-b947-490f-9e67-8afb34e6668f" />
+        <suppliersInternal>
+          <dependency Id="a156b7f0-98ba-4308-91a9-ee9683ef82a3">
+            <classMoniker Id="ee76debd-7ae3-4093-91c0-ca16f66b762f" LastKnownName="CAIFactory" />
+            <elementDefinition Id="a48884e0-0076-42d3-9727-b7a813e55aff" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="5d0e8ef6-431f-4e44-87f2-db090ac9d9ee" isSubstitutable="false">
+            <classMoniker Id="b4ccd2b6-7a11-4d03-a1c0-f2c523b50553" LastKnownName="CRenderable" />
+            <elementDefinition Id="05d35179-7119-4378-b790-4ea01417d0a2" />
+          </generalization>
+          <generalization Id="f989a7cf-322d-47cc-8d52-59b57b99df70" isSubstitutable="false">
+            <classMoniker Id="a59944e5-c751-4474-ba52-d4ada7afa407" LastKnownName="CAnimationable" />
+            <elementDefinition Id="1c257edd-0d45-4646-be60-58173afde090" />
+          </generalization>
+          <generalization Id="c1ce7a0f-d5e1-43e2-b628-7dd89628c412" isSubstitutable="false">
+            <classMoniker Id="02b9f389-d2b6-4e99-af91-f1988e4ec0f8" LastKnownName="CInteractable" />
+            <elementDefinition Id="1b413632-96e2-4a27-b814-b4914c7dee19" />
+          </generalization>
+          <generalization Id="e08dd9ce-b45a-4beb-a60f-977f003a28ce" isSubstitutable="false">
+            <classMoniker Id="fbde4b70-d380-4436-9b22-bb4de2927ab3" LastKnownName="CMovable" />
+            <elementDefinition Id="33a432b7-7ad8-4b6c-aca2-078dde81f7ca" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="d2ec9844-65ed-4dec-ba8d-2bc9a3de51d9" name="static std::string name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="07f2dc5e-b0cc-4743-8965-ca2f9ee1174a" />
+          </property>
+          <property Id="4fe787cf-7e76-48a1-9ce5-38a4075fc07c" name="static aiType* aiType;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a13bb956-3196-4ace-b28d-7a77f1c8dab7" />
+          </property>
+          <property Id="0ceee606-7121-4ff4-8408-2be96f490579" name="CVector2D position;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bde4f693-1af4-490e-93db-c2cf6dcb1c90" />
+          </property>
+          <property Id="eadac8fe-8b0f-4912-8e83-9ab28b5dff10" name="int hp" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="413f5a8c-3543-4003-8a58-adc227137e63" />
+          </property>
+          <property Id="2311e652-456c-45c3-af01-2cb1dab20cb7" name="static int dmg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d15052a4-7e24-4b7e-9312-3360d497d6ac" />
+          </property>
+          <property Id="232f67a0-44f2-4b40-8d88-c2935d846966" name="static eUpgradeType currUpgrade" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fc4804fb-c38a-4049-a5cb-7f8e62168a35" />
+          </property>
+          <property Id="8d781aab-10f9-4d16-9ec5-78ced6027bfc" name="int level" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="66a4714f-ad87-4a47-9df1-dac8a8e32b73" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="bf80142f-5bc7-4052-ba6a-b7e1c1c7427c" name="static void ApplyUpgrade" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ebc5c69e-e231-4e50-8811-8ebd12d90522" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3b421f1b-9a8d-4d74-8069-d3aec2566519" name="eUpgradeType type" direction="In" isUnique="false">
+                  <elementDefinition Id="f4722c55-aa5e-4f75-8eed-95d3e9df3fbe" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ee76debd-7ae3-4093-91c0-ca16f66b762f" name="CAIFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="229bd12c-f00c-4c9b-88f4-37626e40a75e" />
+        <suppliersInternal>
+          <dependency Id="aa123456-01b8-4e2b-a776-7913c7cdc593">
+            <enumerationMoniker Id="5eb168de-6ad2-4626-a8db-e7ec67486308" LastKnownName="AI_types" />
+            <elementDefinition Id="7313ae02-8f70-4de7-ac93-5d87a6faa3f3" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="5eb168de-6ad2-4626-a8db-e7ec67486308" name="AI_types" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="89f31c87-6c7a-4693-b524-e4b4369a7565" />
+        <ownedLiterals>
+          <enumerationLiteral Id="644acce4-3dab-4386-b369-3cf88908c52c" name="SIMPLE_AI">
+            <elementDefinition Id="ad2203cb-3958-4232-88fd-dc4bd51dd5b6" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="569d1089-fd35-44e6-8c24-463f9c50b289" name="AGGRESSIVE_AI">
+            <elementDefinition Id="b6d41268-696f-4f18-963f-0584317b5ae2" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="fe6f28a5-49b8-46d7-b8cd-2542b1ceb470" name="PASSIVE_AI">
+            <elementDefinition Id="c3044f3e-2af6-4309-a9e0-21072eb0aec4" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f2e27818-ad48-46e4-957b-5ec6ff07623c" name="CXML_SurfaceImport" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="20042455-56b4-46ac-9264-0bf3feaaf4a6" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0b026e9f-d6c5-41d7-a838-0f93dd73c7e1" name="CGravity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f5f64417-cc65-45d1-bbcc-02c8bc79f1c1" />
+        <ownedAttributesInternal>
+          <property Id="a02bdf06-367a-4472-ad05-a4a04d784556" name="CVector2D Gravity" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1a17d8bd-47f4-4170-9412-45b58d9fc465" />
+          </property>
+          <property Id="28d7dce5-6b61-4028-b765-3490115ecb46" name="include timer //delta time" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="76b2fdfb-86ff-4b33-af58-d841c4018a0c" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="8411c35b-c3f7-4e04-96bb-a5d200ad303a" name="void SetGravity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e51eb460-2313-4b14-a50a-fadc9ba57caf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7c8f75b3-fe49-44a4-9818-51e4e2a36786" name="CVector2D newGravity" direction="In" isUnique="false">
+                  <elementDefinition Id="77288684-b86a-43f6-88bc-3d45626e9b26" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5350b413-ac68-4ca3-9e1a-05cb216a95ec" name="void SetXGravity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c4f27597-b3b0-46df-a214-904e34a01fed" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cc4208a5-9270-45bc-a39f-95d3dcebe7d5" name="float newXGravity" direction="In" isUnique="false">
+                  <elementDefinition Id="f9af4010-3b1d-4395-bd85-34a095de4346" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a67573b3-af19-4384-9226-f3a16e9b17ad" name="void SetYGravity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="255df958-e5f6-440d-b3cc-55f5f1f7c5dc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9e422aa7-cc40-4c15-a4b0-ae08eda4fc1c" name="float newYGravity" direction="In" isUnique="false">
+                  <elementDefinition Id="f8f494f6-51d8-48f0-a853-c85429e3103d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5dcba232-5d5b-478d-9baf-5fb21e34149a" name="void ApplyGravity" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="20aa4a8e-044c-4b69-9305-9cabd1656663" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="a9fa167e-2b2a-4d15-a0c5-6dec677a50e4" name="UMLs">
+    <elementDefinition Id="d9ca8b86-59c1-4501-a0a4-19e5cded2909" />
+    <profileInstances>
+      <packageHasProfileInstances Id="bd27961e-56e2-4b66-9138-e00753442b0b">
+        <profileInstance Id="7417c100-a549-43a7-a3a5-61cbdaacf509" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="fda6df72-19a2-49ff-86f8-fea6d4ec5bc8">
+        <profileInstance Id="c2d7053d-36a1-43e1-a46e-5677113628eb" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

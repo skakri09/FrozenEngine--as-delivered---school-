@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4DBC688-299E-446B-B5EB-D53A2F08D742}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FrozenEngine</RootNamespace>
+    <SccProjectName>Svn</SccProjectName>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\libraries\i386\OpenAL 1.1 SDK\include;C:\libraries\i386\freealut-1.1.0-bin\include\AL;C:\libraries\i386\SDL-1.2.14\include;C:\libraries\i386\boost_1_47;C:\libraries\i386\SMPEG\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\libraries\i386\OpenAL 1.1 SDK\libs\Win32;C:\libraries\i386\freealut-1.1.0-bin\lib;C:\libraries\i386\SDL-1.2.14\lib;C:\libraries\i386\boost_1_47\lib;C:\libraries\i386\SMPEG\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenAL32.lib;alut.lib;SDL.lib;SDLmain.lib;SDL_ttf.lib;SDL_image.lib;SDL_net.lib;smpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\GFX\background.png" />
+    <None Include="..\GFX\bad_image.png" />
+    <None Include="..\GFX\exit.png" />
+    <None Include="..\GFX\FrozenEngineIcon.png" />
+    <None Include="..\GFX\FrozenLoading720p.png" />
+    <None Include="..\GFX\FrozenLoading800x600.png" />
+    <None Include="..\GFX\menu_bg.png" />
+    <None Include="..\GFX\naruto.png" />
+    <None Include="..\GFX\sasuke.png" />
+    <None Include="..\GFX\single_player.png" />
+    <None Include="..\GFX\start_client.png" />
+    <None Include="..\GFX\start_server.png" />
+    <None Include="..\GFX\tobi.png" />
+    <None Include="..\MPG\EngineIntro720p.mpg" />
+    <None Include="..\Other\todo.txt" />
+    <None Include="..\SFX\attack.wav" />
+    <None Include="..\SFX\button.wav" />
+    <None Include="..\SFX\FrozenMenu.wav" />
+    <None Include="..\SFX\game.wav" />
+    <None Include="..\SFX\jump.wav" />
+    <None Include="..\SFX\landed.wav" />
+    <None Include="..\XML\GameSaves.xml" />
+    <None Include="..\XML\Highscores.xml" />
+    <None Include="..\XML\Resources.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\XML\Settings.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseCharacter.cpp" />
+    <ClCompile Include="InvisibleDynamicSurface.cpp" />
+    <ClCompile Include="InvisibleStaticSurface.cpp" />
+    <ClCompile Include="MovingBackground.cpp" />
+    <ClCompile Include="MovingInteractableEnvironment.cpp" />
+    <ClCompile Include="RenderableAnimation.cpp" />
+    <ClCompile Include="AnimationObject.cpp" />
+    <ClCompile Include="BoostButton.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="CharacterObject.cpp" />
+    <ClCompile Include="EnemyObject.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GCInfo.cpp" />
+    <ClCompile Include="GCPtr.cpp" />
+    <ClCompile Include="Gravity.cpp" />
+    <ClCompile Include="ImageObject.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Interactable.cpp" />
+    <ClCompile Include="IPaddress.cpp" />
+    <ClCompile Include="Iter.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="LogSys.cpp" />
+    <ClCompile Include="Kernel.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MessageManager.cpp" />
+    <ClCompile Include="MessageManagerIncoming.cpp" />
+    <ClCompile Include="MessageManagerOutgoing.cpp" />
+    <ClCompile Include="Movable.cpp" />
+    <ClCompile Include="NetManager.cpp" />
+    <ClCompile Include="RandomNumberGenerator.cpp" />
+    <ClCompile Include="RenderableNoAnimation.cpp" />
+    <ClCompile Include="RenderEngine.cpp" />
+    <ClCompile Include="RRenderEngine.cpp" />
+    <ClCompile Include="SDL_rotozoom.cpp" />
+    <ClCompile Include="SimpleAI.cpp" />
+    <ClCompile Include="SmpegPlayer.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="StaticBackground.cpp" />
+    <ClCompile Include="StaticInteractableEnvironment.cpp" />
+    <ClCompile Include="Surfaces.cpp" />
+    <ClCompile Include="TCPsocketBase.cpp" />
+    <ClCompile Include="TCPsocketClient.cpp" />
+    <ClCompile Include="TCPsocketHost.cpp" />
+    <ClCompile Include="TestPlayer.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="TTFtext.cpp" />
+    <ClCompile Include="Vector2D.cpp" />
+    <ClCompile Include="xmlResourcesImport.cpp" />
+    <ClCompile Include="xmlSaveGames.cpp" />
+    <ClCompile Include="xmlSettingsHandling.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseCharacter.h" />
+    <ClInclude Include="InvisibleDynamicSurface.h" />
+    <ClInclude Include="InvisibleStaticSurface.h" />
+    <ClInclude Include="MovingBackground.h" />
+    <ClInclude Include="MovingInteractableEnvironment.h" />
+    <ClInclude Include="RenderableAnimation.h" />
+    <ClInclude Include="AnimationObject.h" />
+    <ClInclude Include="BoostButton.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="CharacterObject.h" />
+    <ClInclude Include="Gravity.h" />
+    <ClInclude Include="GUI_Interface.h" />
+    <ClInclude Include="Interactable.h" />
+    <ClInclude Include="Movable.h" />
+    <ClInclude Include="EnemyObject.h" />
+    <ClInclude Include="Functor.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GCInfo.h" />
+    <ClInclude Include="GCPtr.h" />
+    <ClInclude Include="ImageObject.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="IPaddress.h" />
+    <ClInclude Include="Iter.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LogSys.h" />
+    <ClInclude Include="Kernel.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MessageManagerBase.h" />
+    <ClInclude Include="MessageManagerIncoming.h" />
+    <ClInclude Include="MessageManagerOutgoing.h" />
+    <ClInclude Include="Messages.h" />
+    <ClInclude Include="NetManager.h" />
+    <ClInclude Include="OutOfRangeExec.h" />
+    <ClInclude Include="RandomNumberGenerator.h" />
+    <ClInclude Include="RenderableNoAnimation.h" />
+    <ClInclude Include="RenderEngine.h" />
+    <ClInclude Include="RRenderEngine.h" />
+    <ClInclude Include="SDL_rotozoom.h" />
+    <ClInclude Include="SimpleAI.h" />
+    <ClInclude Include="SmpegPlayer.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="StateManager.h" />
+    <ClInclude Include="StaticBackground.h" />
+    <ClInclude Include="StaticInteractableEnvironment.h" />
+    <ClInclude Include="SurfaceInterface.h" />
+    <ClInclude Include="Surfaces.h" />
+    <ClInclude Include="TCPsocket.h" />
+    <ClInclude Include="TestPlayer.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="TTFtext.h" />
+    <ClInclude Include="Task.h" />
+    <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="xmlResourcesImport.h" />
+    <ClInclude Include="xmlSaveGames.h" />
+    <ClInclude Include="xmlSettingsHandling.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

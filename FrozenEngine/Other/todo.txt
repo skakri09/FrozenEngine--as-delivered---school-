@@ -1,0 +1,74 @@
+*	Nettverk: Først hvor en spiller er server og client, motspiller er bare client. Senere 
+	eventuelt også hvor begge er kun client, og har en helt seperat server.
+
+*	Netverks "lobby", eventuelt bat filer. Husk at vi kan bruke www.gemth.com som dns adresse 
+	istedenfor IP adresse om vi bruker ekstern server. Muligens også ellers. DNS pekeren til 
+	domenet kan endres på domeneshop.no
+
+*	Save games. Når man saver skal posisjon, HP etc lagres så når man starter opp igjen blir
+	dette lastet inn igjen (XML?) og du starter fra saved game.
+
+*	Legge til Mouse handeling (mouse pos x og y, buttons up og down)
+
+*	Laste alle filer fra XML (foreløpig kun bildefiler som lastes). Mangler Musikk, saved games,
+	highscore, settings (keys etc). Noe mer?
+
+*	Kommunikasjon mellom spesielt output- og input -manager. Hvordan skal dette løses. Foreløpig
+	er den eneste sammenhengen de to klassene har, et objekt av hver i en vector i manager.cpp. 
+	Eneste funksjonen som kan kalles av det objektet er ->Update(), siden vectoren de ligger i 
+	er av type CUpdatable, men den pure virtual funksjonen Update().
+
+*	Legge til at [SDLK_ESC] quitter enginen.
+
+*	Lage vinduet minimum 800x600 størrelse.
+
+*	Endre den nåværende pump-events måten i inputManager, til å bruke en "oldkeys" array istedenfor 
+	en if-test. 
+
+*	Lage Readme for innleveringen. Skal inneholde:
+	a.	Funksjonalitet som er med
+	b.	Funksjonalitet som ble kuttet ut, og hvorfor
+	c.	Litt om arbeidsgang
+	d.	Beskrivelse av design og struktur med forklaring
+
+*	Finne ferdige Sprite Sheets på internett for awesomesauce graphics.
+
+*	Lage spill. Ideer så langt: 
+	*	"tekken-style" slosse spill hvor man kan spille mot annen player,
+		eventuelt også lage en AI motstander.
+	* 
+
+*	Kollisjon/fysikk
+
+*	AI?
+
+*	Scripting? ikke veldig sannsynlig.
+
+*	Content tools? igjen ikke altfor sannsynlig.
+
+*	Endre mappenavn sfx til SFX og Graphics til GFX. Må endre bl.a. XMLparser
+
+*	Interface Manager
+
+*	Background "creator". Klassen har funksjon AddBackground(bool collision, x, y); 
+	klassen legger det til i vectorer som blir iterert igjenom og kalt på av outputManager for
+	å skrive ut innholdet. Om collision blir en kopi av surfacen laget i en spesifisert farge og lagt under,
+	så player kan sjekke kollisjon mot en farge istedenfor alle bakgrunns objekter individuelt?
+	if(IsCollisionToSlope)
+		playerVelocity = getSlopeAngle();
+
+/*     U T E N F O R      E N G I N E N     ( S P I L L    R E L A T E R T )   */
+*	CPlayer class, inneholder HP, pos x/y, stats(?). Man opretter objekt av denne for å lage en 
+	ny player. Klassen har setters og getters for hp/stats/pos etc.
+
+
+
+* GCPTR STUFFF
+
+
+/* FJærne images fra renderlist */
+* ImageObject: bool FlagForRemoval(bool remove = true);
+  ImageObject: bool IsFlaggedForRemoveal(){return remove;}
+  RenderEngine if(**i)->IsFlaggedForRemoval{remove from renderList;}
+
+  /* Fikse button class */

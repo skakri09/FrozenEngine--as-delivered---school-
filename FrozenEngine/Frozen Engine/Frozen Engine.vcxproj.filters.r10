@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="MAIN">
+      <UniqueIdentifier>{baef0f7d-617d-4dde-8bd0-c83f19ae7118}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Demo">
+      <UniqueIdentifier>{a88c7c3c-72df-45d8-baab-18fe506e5f83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{995dda2f-5a9a-4ea6-be5f-fb79baaa50b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\XML handling">
+      <UniqueIdentifier>{d91f916c-a0bd-412d-ad66-031e9e7acc77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\SDL_net">
+      <UniqueIdentifier>{5b05d13d-4abc-45ed-9ba8-b76926a05fff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\SDL_net\Header Files">
+      <UniqueIdentifier>{6c841f57-ed83-463d-bf50-57e44264a36e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\SDL_net\Source Files">
+      <UniqueIdentifier>{f365666f-86c9-4567-a013-544e87e9df5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\SMPG Player">
+      <UniqueIdentifier>{cac9ab6f-6168-4232-a765-1bcd034fcb7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Logger">
+      <UniqueIdentifier>{cc0613dd-1798-4b11-83e7-1e0357e5a2fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GUI Handeling">
+      <UniqueIdentifier>{70366f9c-52a9-4508-a48d-74fb673e4df4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GCPtr">
+      <UniqueIdentifier>{78fbd76b-931a-48e2-bc3c-8f244e0277e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core">
+      <UniqueIdentifier>{e916fdbb-9a4f-43e3-80fa-5240fc329943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Game Demo\Header Files">
+      <UniqueIdentifier>{49e317c7-c84c-4fa5-93ad-c07102a908f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Demo\Source Files">
+      <UniqueIdentifier>{f8f1532e-86ff-4a91-b99d-4b125975949e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\GFX">
+      <UniqueIdentifier>{c20f7956-7fd6-42df-80c2-d822b25aaa99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\XML">
+      <UniqueIdentifier>{00e3e5df-76a8-40f2-98a5-24279565bcbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Other">
+      <UniqueIdentifier>{382e9667-cdf8-4825-b583-912d4a2ccbb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\MPG">
+      <UniqueIdentifier>{459e7322-4a89-4cb7-9593-8739a4656afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\SFX">
+      <UniqueIdentifier>{2334bc63-b67b-405c-be88-2b7e3ab89fb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\XML\Highscores.xml">
+      <Filter>Resource Files\XML</Filter>
+    </None>
+    <None Include="..\XML\Resources.xml">
+      <Filter>Resource Files\XML</Filter>
+    </None>
+    <None Include="..\XML\Settings.xml">
+      <Filter>Resource Files\XML</Filter>
+    </None>
+    <None Include="..\SFX\attack.wav">
+      <Filter>Resource Files\SFX</Filter>
+    </None>
+    <None Include="..\SFX\game.wav">
+      <Filter>Resource Files\SFX</Filter>
+    </None>
+    <None Include="..\SFX\jump.wav">
+      <Filter>Resource Files\SFX</Filter>
+    </None>
+    <None Include="..\SFX\menu.wav">
+      <Filter>Resource Files\SFX</Filter>
+    </None>
+    <None Include="..\Other\todo.txt">
+      <Filter>Resource Files\Other</Filter>
+    </None>
+    <None Include="..\GFX\FrozenEngineIcon.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\MPG\EngineIntro720p.mpg">
+      <Filter>Resource Files\MPG</Filter>
+    </None>
+    <None Include="..\XML\GameSaves.xml">
+      <Filter>Resource Files\XML</Filter>
+    </None>
+    <None Include="..\GFX\start_server.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\start_client.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\exit.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\tobi.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\naruto.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\FrozenLoading720p.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\FrozenLoading800x600.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\sasuke.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\single_player.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\bad_image.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\menu_bg.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\GFX\background.png">
+      <Filter>Resource Files\GFX</Filter>
+    </None>
+    <None Include="..\SFX\button.wav">
+      <Filter>Resource Files\SFX</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Engine\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="LogSys.cpp">
+      <Filter>Engine\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="GCInfo.cpp">
+      <Filter>Engine\GCPtr</Filter>
+    </ClCompile>
+    <ClCompile Include="GCPtr.cpp">
+      <Filter>Engine\GCPtr</Filter>
+    </ClCompile>
+    <ClCompile Include="Iter.cpp">
+      <Filter>Engine\GCPtr</Filter>
+    </ClCompile>
+    <ClCompile Include="SmpegPlayer.cpp">
+      <Filter>Engine\SMPG Player</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>MAIN</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderEngine.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_rotozoom.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Surfaces.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageObject.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationObject.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IPaddress.cpp">
+      <Filter>Engine\SDL_net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageManager.cpp">
+      <Filter>Engine\SDL_net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageManagerIncoming.cpp">
+      <Filter>Engine\SDL_net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageManagerOutgoing.cpp">
+      <Filter>Engine\SDL_net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NetManager.cpp">
+      <Filter>Engine\SDL_net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPsocketBase.cpp">
+      <Filter>Engine\SDL_net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPsocketClient.cpp">
+      <Filter>Engine\SDL_net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPsocketHost.cpp">
+      <Filter>Engine\SDL_net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlSettingsHandling.cpp">
+      <Filter>Engine\XML handling</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlResourcesImport.cpp">
+      <Filter>Engine\XML handling</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlSaveGames.cpp">
+      <Filter>Engine\XML handling</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterObject.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleAI.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TTFtext.cpp">
+      <Filter>Engine\GUI Handeling</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Engine\GUI Handeling</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Game Demo\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Game Demo\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CKernel.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyObject.cpp">
+      <Filter>Engine\Core\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Logger.h">
+      <Filter>Engine\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="LogSys.h">
+      <Filter>Engine\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="GCInfo.h">
+      <Filter>Engine\GCPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="GCPtr.h">
+      <Filter>Engine\GCPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="Iter.h">
+      <Filter>Engine\GCPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="OutOfRangeExec.h">
+      <Filter>Engine\GCPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="SmpegPlayer.h">
+      <Filter>Engine\SMPG Player</Filter>
+    </ClInclude>
+    <ClInclude Include="IPaddress.h">
+      <Filter>Engine\SDL_net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageManagerBase.h">
+      <Filter>Engine\SDL_net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageManagerIncoming.h">
+      <Filter>Engine\SDL_net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageManagerOutgoing.h">
+      <Filter>Engine\SDL_net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Messages.h">
+      <Filter>Engine\SDL_net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NetManager.h">
+      <Filter>Engine\SDL_net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPsocket.h">
+      <Filter>Engine\SDL_net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlSettingsHandling.h">
+      <Filter>Engine\XML handling</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlResourcesImport.h">
+      <Filter>Engine\XML handling</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlSaveGames.h">
+      <Filter>Engine\XML handling</Filter>
+    </ClInclude>
+    <ClInclude Include="TTFtext.h">
+      <Filter>Engine\GUI Handeling</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Engine\GUI Handeling</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Game Demo\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Game Demo\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationObject.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterObject.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CKernel.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyObject.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageObject.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderEngine.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_rotozoom.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleAI.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Surfaces.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Task.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Engine\Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>MAIN</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
